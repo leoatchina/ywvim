@@ -848,7 +848,7 @@ autocmd BufEnter * call <SID>Ywvim_NewBufFix()
 
 imap <silent> <C-\> <C-R>=Ywvim_toggle()<CR>
 cmap <silent> <C-\> <C-R>=Ywvim_toggle()<CR>
-imap <silent> <C-S-Space> <C-R>=Ywvim_toggle()<CR>
-cmap <silent> <C-S-Space> <C-R>=Ywvim_toggle()<CR>
+imap <silent> <C-@> <C-R>=Ywvim_toggle()<CR>
+cmap <silent> <C-@> <C-R>=Ywvim_toggle()<CR>
 
 " vim: foldmethod=marker:
