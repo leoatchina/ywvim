@@ -846,10 +846,7 @@ function s:Ywvim_NewBufFix() "{{{1 Fix new buffer's (lang) bug
 endfunction "}}}
 autocmd BufEnter * call <SID>Ywvim_NewBufFix()
 
-imap <silent> <C-\> <C-R>=Ywvim_toggle()<CR>
-cmap <silent> <C-\> <C-R>=Ywvim_toggle()<CR>
 imap <silent> <C-_> <C-R>=Ywvim_toggle()<CR>
 cmap <silent> <C-_> <C-R>=Ywvim_toggle()<CR>
 imap <silent> <ESC><SPACE> <C-R>=Ywvim_toggle()<CR>
 cmap <silent> <ESC><SPACE> <C-R>=Ywvim_toggle()<CR>
-" vim: foldmethod=marker:
