@@ -587,8 +587,8 @@ function s:Ywvim_char(key) "{{{1 输入中文的主要模块
         elseif keycode == char2nr("\<C-^>")
             return <SID>Ywvim_ReturnChar(s:ywvim_pgbuf[s:ywvim_pagenr][0].word).<SID>Ywvim_UIsetting(0)
             "{{{2 <C-\>
-        "elseif keycode == char2nr("\<C-\>")
-            "return <SID>Ywvim_ReturnChar(b:ywuvim_showchar)."\<C-^>"
+        elseif keycode == char2nr("\<C-\>")
+            return <SID>Ywvim_ReturnChar(b:ywuvim_showchar)."\<C-^>"
             "{{{2 标点符号
         elseif s:ywvim_pgbuf[s:ywvim_pagenr] != []
             if s:ywvim_{b:ywvim_parameters["active_mb"]}_zhpunc && has_key(s:ywvim_{b:ywvim_parameters["active_mb"]}_puncdic, key)
@@ -846,7 +846,7 @@ function s:Ywvim_NewBufFix() "{{{1 Fix new buffer's (lang) bug
 endfunction "}}}
 autocmd BufEnter * call <SID>Ywvim_NewBufFix()
 
-imap <silent> <C-_> <C-R>=Ywvim_toggle()<CR>
-cmap <silent> <C-_> <C-R>=Ywvim_toggle()<CR>
-imap <silent> <C-@> <C-R>=Ywvim_toggle()<CR>
-cmap <silent> <C-@> <C-R>=Ywvim_toggle()<CR>
+"imap <silent> <C-_> <C-R>=Ywvim_toggle()<CR>
+"cmap <silent> <C-_> <C-R>=Ywvim_toggle()<CR>
+"imap <silent> <C-@> <C-R>=Ywvim_toggle()<CR>
+"cmap <silent> <C-@> <C-R>=Ywvim_toggle()<CR>
